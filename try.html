@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Internship</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fb;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4f46e5, #6366f1);
+      padding: 20px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .btn {
+      padding: 10px 22px;
+      background: #22c55e;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    section {
+      padding: 80px 60px;
+      animation: fadeUp 1s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      color: #1e1b4b;
+    }
+
+    .hero p {
+      margin: 20px 0;
+      line-height: 1.7;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #4f46e5;
+    }
+
+    .form-box {
+      max-width: 400px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #1e1b4b;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Smart Internship</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#signup">Sign Up</a></li>
+      <li><a href="#admin">Admin</a></li>
+    </ul>
+    <a href="#signup" class="btn">Get Started</a>
+  </nav>
+</header>
+
+<section id="home">
+  <div class="hero">
+    <div>
+      <h1>Build Your Career with Smart Internships</h1>
+      <p>Smart Internship connects students with real-world projects, industry mentors, and skill-based learning opportunities.</p>
+      <a href="#signup" class="btn">Get Started</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="internship">
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>We provide structured internships that focus on practical skills, mentorship, and career growth.</p>
+  <div class="cards">
+    <div class="card">
+      <h3>Industry Ready</h3>
+      <p>Work on real projects designed by professionals.</p>
+    </div>
+    <div class="card">
+      <h3>Mentorship</h3>
+      <p>Learn directly from experienced mentors.</p>
+    </div>
+    <div class="card">
+      <h3>Certification</h3>
+      <p>Get certified and boost your resume.</p>
+    </div>
+  </div>
+  <br>
+  <a href="#signup" class="btn">Get Started</a>
+</section>
+
+<section id="signup">
+  <h2>Student Sign Up</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <input type="password" placeholder="Password">
+    <a href="#" class="btn">Register</a>
+  </div>
+  <br>
+  <a href="#home" class="btn">Get Started</a>
+</section>
+
+<section id="admin">
+  <h2>Admin Login</h2>
+  <div class="form-box">
+    <input type="text" placeholder="Admin ID">
+    <input type="password" placeholder="Password">
+    <a href="#" class="btn">Login</a>
+  </div>
+  <br>
+  <a href="#home" class="btn">Get Started</a>
+</section>
+
+<footer>
+  <p>© 2026 Smart Internship. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

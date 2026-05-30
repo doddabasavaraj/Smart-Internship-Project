@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benefits of an Internship</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f6fb;
+  text-align:center;
+}
+h1{margin-top:40px;font-size:32px}
+h3{margin-top:10px;color:#555}
+.container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:60px auto;
+  flex-wrap:wrap;
+}
+.card{
+  width:200px;
+  animation:floatUp 1.2s ease forwards;
+}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: purple;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: purple;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: rgb(255, 128, 0);
+      color: #f6f5f2;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+.icon{
+  width:70px;height:70px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:28px;
+  margin:0 auto 15px;
+}
+.box{
+  padding:20px;
+  border-radius:10px;
+  color:#fff;
+  min-height:170px;
+  transition:.4s;
+}
+.box:hover{
+  transform:translateY(-12px) scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+.c1{background:#9aa5ff}
+.c2{background:#ff3d7f}
+.c3{background:#0b0f8a}
+.c4{background:#ff6aa2}
+.c5{background:#3f47ff}
+@keyframes floatUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+<h1>Benefits of an Internship Infographics</h1>
+<h3>Are internships still worthwhile?</h3>
+
+<!-- NAVBAR -->
+  <header>
+    <div class="logo">Smart Internship</div>
+    <nav>
+      <a target="_blank" href="SI1.html">Home</a>
+      <a target="_blank" href="about.html">About us</a>
+      <a target="_blank" href="admin.html">Admin</a>
+      <a target="_blank" href="info.html">Info</a>
+      <a target="_parent" GetStarted.html" class="btn-primary">Get Started</a>
+    </nav>
+  </header>
+
+<div class="container">
+  <div class="card">
+    <div class="icon c1"><i class="fas fa-graduation-cap"></i></div>
+    <div class="box c1"><h4>College Credit</h4><p>It's the eighth and farthest-known solar planet from the Sun</p></div>
+  </div>
+  <div class="card">
+    <div class="icon c2"><i class="fas fa-laptop-code"></i></div>
+    <div class="box c2"><h4>Skills</h4><p>It's the fifth planet from the Sun and the largest</p></div>
+  </div>
+  <div class="card">
+    <div class="icon c3"><i class="fas fa-briefcase"></i></div>
+    <div class="box c3"><h4>Experience</h4><p>Mars is the fourth planet and a cold place</p></div>
+  </div>
+  <div class="card">
+    <div class="icon c4"><i class="fas fa-network-wired"></i></div>
+    <div class="box c4"><h4>Network</h4><p>Mercury is closest planet to the Sun</p></div>
+  </div>
+  <div class="card">
+    <div class="icon c5"><i class="fas fa-industry"></i></div>
+    <div class="box c5"><h4>Right Industry</h4><p>Venus has very high temperatures</p></div>
+  </div>
+</div>
+<script>
+// Stagger animation
+const cards=document.querySelectorAll('.card');
+cards.forEach((c,i)=>{c.style.animationDelay=`${i*0.2}s`;});
+</script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Primal7 Style</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#4CAF50;
+      --dark:#1f2d2b;
+      --gray:#666;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',sans-serif;
+      background:#fff;
+      color:dark;
+      overflow-x:hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      animation: slideDown 1s ease forwards;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: purple;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: purple;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+   .btn-primary {
+      background:rgb(255, 124, 1);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: aqua;
+      font-weight: 600;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* HERO */
+    .hero{
+      text-align:center;
+      padding:90px 20px 50px;
+      animation:fadeIn 1.5s ease;
+    }
+
+    .hero h1{
+      font-size:42px;
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      max-width:620px;
+      margin:auto;
+      color:var(--gray);
+      line-height:1.7;
+      font-size:18px;
+    }
+
+    /* CONTENT */
+    .content{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      padding:70px 80px;
+      align-items:center;
+    }
+
+    .text-box{
+      background:#fff;
+      padding:40px;
+      border-radius:12px;
+      box-shadow:0 15px 40px rgba(0,0,0,.1);
+      animation:fadeLeft 1.3s ease;
+    }
+
+    .text-box h2{
+      font-size:32px;
+      margin-bottom:20px;
+    }
+
+    .text-box h2 span{color:var(--green)}
+
+    .text-box p{
+      margin-bottom:18px;
+      color:#555;
+      line-height:1.7;
+    }
+
+    /* IMAGES */
+    .images{
+      display:grid;
+      grid-template-rows:1fr 1fr;
+      gap:20px;
+      animation:fadeRight 1.3s ease;
+    }
+
+    .images img{
+      width:100%;
+      border-radius:12px;
+      transition:.5s;
+    }
+
+    .images img:hover{
+      transform:scale(1.05);
+      box-shadow:0 20px 40px rgba(0,0,0,.25);
+    }
+
+    /* ANIMATIONS */
+    @keyframes slideDown{
+      from{opacity:0;transform:translateY(-40px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    @keyframes fadeIn{
+      from{opacity:0}
+      to{opacity:1}
+    }
+    @keyframes fadeLeft{
+      from{opacity:0;transform:translateX(-60px)}
+      to{opacity:1;transform:translateX(0)}
+    }
+    @keyframes fadeRight{
+      from{opacity:0;transform:translateX(60px)}
+      to{opacity:1;transform:translateX(0)}
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .content{grid-template-columns:1fr;padding:40px}
+      header{padding:20px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+  <header>
+    <div class="logo">Smart Internship</div>
+    <nav>
+      <a href="SI.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="admin.html">Admin</a>
+      <a href="">Info</a>
+      <a href="GetStarted.html" class="btn-primary">Get Started</a>
+    </nav>
+  </header>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>About Us</h1>
+  <p>
+    We help folks love, heal, understand, and move their bodies—so they can be happier, healthier humans.
+  </p>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+
+  <div class="text-box">
+    <h2>We’re here to get as many people <span>moving</span> as possible.</h2>
+    <p>
+      Not just people that are already fit, but all people. We offer a more accessible and sustainable alternative to the popular “No pain. No gain.” mantra.
+    </p>
+    <p>
+      We don’t think exercise should be associated with pain at all. Exercise is medicine. When done right, it not only alleviates pain, but it protects against it.
+    </p>
+  </div>
+
+  <div class="images">
+    <!-- Image URLs -->
+    <img src="img2.jpg" alt="Fitness group" />
+    <img src="img3.jpg" alt="Workout community" />
+  </div>
+
+</section>
+
+<script>
+  // Subtle scroll animation trigger
+  window.addEventListener('scroll',()=>{
+    document.querySelectorAll('.text-box,.images').forEach(el=>{
+      const pos=el.getBoundingClientRect().top;
+      if(pos<window.innerHeight-100){el.style.opacity=1}
+    })
+  })
+</script>
+
+</body>
+</html>
